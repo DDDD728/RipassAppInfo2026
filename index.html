@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>getElementById Demo</title>
+</head>
+<body>
+<h1 id="titolo">Ciao ragazzi!</h1>
+<button onclick="cambiaTesto()">Cambia Testo</button>
+<script>
+function cambiaTesto()
+{
+    var elemento=document.getElementById("titolo");
+    elemento.textContent="Benvenuti nella lezione di JavaScript!";
+}
+</script>
+</body>
+</html>
