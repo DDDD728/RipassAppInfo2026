@@ -99,6 +99,103 @@
     <section>
         <h2>Le Conseguenze</h2>
         <p>La Rivoluzione Russa portò alla fine della monarchia e alla nascita dell'Unione Sovietica, che esistette fino al 1991. La rivoluzione ispirò altri movimenti comunisti nel mondo e cambiò radicalmente l'orientamento politico globale. La guerra civile russa tra i Bolscevichi (Armata Rossa) e le forze controrivoluzionarie (Armata Bianca) durò fino al 1922.</p>
+    <script>
+    const flashcards = [
+        {
+            question: "In che anno avvenne la Rivoluzione Russa?",
+            answer: "Nel 1917."
+        },
+        {
+            question: "Quale impero crollò a causa della Rivoluzione Russa?",
+            answer: "L'Impero Russo."
+        },
+        {
+            question: "Quale forma di governo fu rovesciata nel 1917?",
+            answer: "La monarchia zarista."
+        },
+        {
+            question: "Chi era lo zar che abdicò durante la rivoluzione?",
+            answer: "Nicola II."
+        },
+        {
+            question: "Quali erano le principali cause della Rivoluzione Russa?",
+            answer: "Disuguaglianze sociali ed economiche, repressione zarista e pessime condizioni di vita."
+        },
+        {
+            question: "Quale guerra peggiorò la crisi economica e politica della Russia?",
+            answer: "La Prima Guerra Mondiale."
+        },
+        {
+            question: "Cosa accadde nel febbraio del 1917?",
+            answer: "Scioperi e proteste portarono all'abdicazione dello zar Nicola II."
+        },
+        {
+            question: "Chi prese il potere durante la Rivoluzione d’Ottobre?",
+            answer: "I Bolscevichi."
+        },
+        {
+            question: "Chi guidava i Bolscevichi?",
+            answer: "Vladimir Lenin."
+        },
+        {
+            question: "Cosa fece la Rivoluzione d’Ottobre del 1917?",
+            answer: "Rovesciò il governo provvisorio e instaurò un regime socialista."
+        },
+        {
+            question: "Chi era Leon Trotsky?",
+            answer: "Il comandante dell’Armata Rossa e teorico della rivoluzione."
+        },
+        {
+            question: "Come si chiamava l’esercito dei rivoluzionari?",
+            answer: "Armata Rossa."
+        },
+        {
+            question: "Come si chiamavano le forze controrivoluzionarie?",
+            answer: "Armata Bianca."
+        },
+        {
+            question: "Fino a quando durò la guerra civile russa?",
+            answer: "Fino al 1922."
+        },
+        {
+            question: "Quale stato nacque dalla Rivoluzione Russa?",
+            answer: "L’Unione Sovietica."
+        },
+        {
+            question: "Fino a che anno esistette l’Unione Sovietica?",
+            answer: "Fino al 1991."
+        },
+        {
+            question: "Quale impatto ebbe la Rivoluzione Russa nel mondo?",
+            answer: "Ispirò movimenti comunisti e cambiò l’equilibrio politico globale."
+        }
+    ];
+
+    let currentCard = 0;
+    let showingAnswer = false;
+
+    const cardText = document.getElementById("card-text");
+
+    function showCard() {
+        cardText.textContent = flashcards[currentCard].question;
+        showingAnswer = false;
+    }
+
+    function flipCard() {
+        cardText.textContent = showingAnswer
+            ? flashcards[currentCard].question
+            : flashcards[currentCard].answer;
+        showingAnswer = !showingAnswer;
+    }
+
+    function nextCard() {
+        currentCard = (currentCard + 1) % flashcards.length;
+        showCard();
+    }
+
+    showCard();
+</script>
+
     </section>
 
     <footer>
